@@ -46,8 +46,8 @@ const rateLimiter = (req, res, next) => {
                 };
                 // if last request is still within the window but the number of request is greater than the time limit, throw an error
             } else {
-                res.status(429).send(`You have exceeded the ${MAX_REQUEST_PER_WINDOW} requests limit in ${WINDOW_SIZE_IN_SECONDS} seconds limit!`)
-                //throw new RequestLimitError(`You have exceeded the ${MAX_REQUEST_PER_WINDOW} requests limit in ${WINDOW_SIZE_IN_SECONDS} seconds limit!`)
+                //res.status(429).send(`You have exceeded the ${MAX_REQUEST_PER_WINDOW} requests limit in ${WINDOW_SIZE_IN_SECONDS} seconds limit!`)
+                throw new RequestLimitError(`You have exceeded the ${MAX_REQUEST_PER_WINDOW} requests limit in ${WINDOW_SIZE_IN_SECONDS} seconds limit!`)
             }
 
             next()
