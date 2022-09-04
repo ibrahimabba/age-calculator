@@ -4,6 +4,6 @@ import rateLimiter from '../middlewares/rateLimitter.js'
 
 const router = Router()
 
-router.get('/howold?dob=02/02/1996', rateLimiter, howOldController)
+router.get('/howold/:dob', rateLimiter, howOldController)
 
 export default router
