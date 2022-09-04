@@ -1,7 +1,7 @@
 import moment from 'moment';
 import { RequestLimitError } from '../helpers/errors.js';
 
-const WINDOW_SIZE_IN_SECONDS = 10;
+const WINDOW_SIZE_IN_SECONDS = 100;
 const MAX_REQUEST_PER_WINDOW = 3;
 
 const userRequestRecords = {}
