@@ -1,11 +1,11 @@
 import rateLimit from 'express-rate-limit'
 
 const limiter = rateLimit({
-    windowMs: 1 * 1000, // 1 minutes
-    max: 3, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
-    standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
-    legacyHeaders: false, // Disable the `X-RateLimit-*` headers
-    statusCode: 429
+  windowMs: 1 * 1000, // 1 minutes
+  max: 3, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
+  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+  legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+  statusCode: 429
 })
 
 // Apply the rate limiting middleware to all requests
@@ -18,7 +18,6 @@ export default limiter
 // const MAX_REQUEST_PER_WINDOW = 3;
 
 // const userRequestRecords = {}
-
 
 // const rateLimiter = (req, res, next) => {
 //     try {
