@@ -28,7 +28,7 @@ export class ValidationError extends DomainError {
   constructor (message, data = {}) {
     super(message)
     this.errorName = 'INVALID_REQUEST'
-    this.httpStatusCode = 400
+    this.httpStatusCode = 429
     this.data = data
   }
 }
@@ -37,7 +37,7 @@ export class BadRequestError extends DomainError {
   constructor (message, data = {}) {
     super(message)
     this.errorName = 'BAD_REQUEST'
-    this.httpStatusCode = 400
+    this.httpStatusCode = 429
     this.data = data
   }
 }
