@@ -21,6 +21,7 @@
   "homepage": "https://github.com/ibrahimabba/age-calculator#readme",
   "dependencies": {
     "express": "^4.18.1",
+    "express-rate-limit": "^6.5.2",
     "moment": "^2.29.4"
   },
   "devDependencies": {
