@@ -22,7 +22,7 @@ export const rateLimiter = (req, _res, next) => {
             next();
         }
         // if record is found, calculate window difference by subtracting window size from the current time
-        let windowStartTimestamp = moment().subtract(WINDOW_SIZE_IN_SECONDS, 'minutes').unix();
+        let windowStartTimestamp = moment().subtract(WINDOW_SIZE_IN_SECONDS, 'seconds').unix();
 
         // if last request is still within the window
         if (record.requestTimeStamp > windowStartTimestamp) {

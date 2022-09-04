@@ -3,6 +3,6 @@
     "track": "backend",
     "email": "ibrahimsuleiman364@gmail.com",
     "githubUsername": "ibrahimabba",
-    "deployedAppURL": "",
-    "explainer": ""
+    "deployedAppURL": "https://age-calculat.herokuapp.com",
+    "explainer": "nodejs api project"
 }
