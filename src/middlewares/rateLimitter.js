@@ -10,13 +10,13 @@
 // // Apply the rate limiting middleware to all requests
 // export default limiter
 
-// import moment from 'moment';
-// import { RequestLimitError } from '../helpers/errors.js';
+import moment from 'moment';
+//import { RequestLimitError } from '../helpers/errors.js';
 
-// const WINDOW_SIZE_IN_SECONDS = 100;
-// const MAX_REQUEST_PER_WINDOW = 3;
+const WINDOW_SIZE_IN_SECONDS = 100;
+const MAX_REQUEST_PER_WINDOW = 3;
 
-// const userRequestRecords = {}
+const userRequestRecords = {}
 
 
 const rateLimiter = (req, res, next) => {
