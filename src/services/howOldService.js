@@ -1,11 +1,11 @@
 import { ValidationError } from '../helpers/errors.js'
 
 export const howOldService = async (query) => {
-  if (!query.dob) {
+  if (!query.DOB) {
     throw new ValidationError('No date of birth passed to request')
   }
 
-  const dateOfBirth = new Date(query.dob)
+  const dateOfBirth = new Date(query.DOB)
 
   if (dateOfBirth.toString() === 'Invalid Date') {
     throw new ValidationError('Invalid date')
