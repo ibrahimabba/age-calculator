@@ -1,14 +1,13 @@
 import express from "express";
-import rateLimiter from "./src/middlewares/rateLimitter.js";
 import howoldRoute from "./src/routes/howOldRoute.js";
 
 const app = express()
 
-app.get('/', rateLimiter, (_req, res) => {
-    res.send('Welcome')
+app.get('/', (_req, res) => {
+    res.send('Welcome!!!')
 })
 
-app.use('/', rateLimiter, howoldRoute)
+app.use('/', howoldRoute)
 
 // error handler
 app.use(function (err, _req, res, _next) {
