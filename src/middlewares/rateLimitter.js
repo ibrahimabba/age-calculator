@@ -1,16 +1,3 @@
-// import rateLimit from 'express-rate-limit'
-
-// const limiter = rateLimit({
-//   windowMs: 60 * 60 * 1000, // 1 hour
-//   max: 3, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
-//   standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
-//   legacyHeaders: false, // Disable the `X-RateLimit-*` headers
-//   statusCode: 429
-// })
-
-// // Apply the rate limiting middleware to all requests
-// export default limiter
-
 import moment from 'moment'
 
 const WINDOW_SIZE_IN_SECONDS = 1
