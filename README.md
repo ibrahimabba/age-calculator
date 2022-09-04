@@ -1,3 +1,4 @@
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/dc0056e69d9542f1ad32ee824f0285cd)](https://www.codacy.com/gh/ibrahimabba/age-calculator/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ibrahimabba/age-calculator&amp;utm_campaign=Badge_Grade)
 # Backend Assessment
 
 Build and deploy a very simple API that does the following
