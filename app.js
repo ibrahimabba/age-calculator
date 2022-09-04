@@ -1,14 +1,13 @@
 import express from "express";
 import rateLimiter from "./src/middlewares/rateLimitter.js";
 import howoldRoute from "./src/routes/howOldRoute.js";
+import cors from "cors";
 
 const app = express()
 
-app.use(rateLimiter)
+app.use(cors())
 
-// app.get('/', (_req, res) => {
-//     res.send('Welcome!!!')
-// })
+app.use(rateLimiter)
 
 app.use('/', howoldRoute)
 
@@ -23,13 +22,13 @@ app.use(function (err, _req, res, _next) {
                 data: err.data || {}
             });
     } else {
-        // res.status(500)
-        //     .json({
-        //         success: false,
-        //         message: 'Something went wrong, it\`ll be nice if you report this to us.',
-        //         status: 500,
-        //         data: {}
-        //     });
+        res.status(500)
+            .json({
+                success: false,
+                message: 'Something went wrong, it\`ll be nice if you report this to us.',
+                status: 500,
+                data: {}
+            });
     }
 });
 
