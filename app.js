@@ -1,13 +1,10 @@
 import express from 'express'
-import rateLimiter from './src/middlewares/rateLimitter.js'
 import howoldRoute from './src/routes/howOldRoute.js'
 import cors from 'cors'
 
 const app = express()
 
 app.use(cors())
-
-app.use(rateLimiter)
 
 app.use('/', howoldRoute)
 
