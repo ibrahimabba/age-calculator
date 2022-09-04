@@ -4,7 +4,7 @@ class DomainError extends Error {
 
     httpStatusCode = 500;
 
-    data = {}
+    data = {};
 
     constructor(message = '', data = {}) {
         super(message);

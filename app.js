@@ -3,13 +3,13 @@ import rateLimiter from "./src/middlewares/rateLimitter.js";
 import howoldRoute from "./src/routes/howOldRoute.js";
 import cors from "cors";
 
-const app = express()
+const app = express();
 
-app.use(cors())
+app.use(cors());
 
-app.use(rateLimiter)
+app.use(rateLimiter);
 
-app.use('/', howoldRoute)
+app.use('/', howoldRoute);
 
 // error handler
 app.use(function (err, _req, res, _next) {
