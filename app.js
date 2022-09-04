@@ -3,8 +3,8 @@ import howoldRoute from "./src/routes/howOldRoute.js";
 
 const app = express()
 
-app.get('/test', (_req, res) => {
-    res.send('Hello World!')
+app.get('/', (_req, res) => {
+    res.send('Welcome')
 })
 
 app.use('/', howoldRoute)
