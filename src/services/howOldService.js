@@ -14,9 +14,12 @@ export const howOldService = async (query) => {
 }
 
 function calculateAge (dateString) {
-  const ageInMilliseconds = new Date() - dateString
+  const ageDifMs = Date.now() - new Date(dateString).getTime()
+  const ageDate = new Date(ageDifMs)
+  return Math.abs(ageDate.getUTCFullYear() - 1970)
+  // const ageInMilliseconds = new Date() - dateString
 
-  // convert to years
-  const age = Math.floor(ageInMilliseconds / 1000 / 60 / 60 / 24 / 365)
-  return age
+  // // convert to years
+  // const age = Math.floor(ageInMilliseconds / 1000 / 60 / 60 / 24 / 365)
+  // return age
 }
