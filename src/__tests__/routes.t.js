@@ -4,6 +4,7 @@ import app from "../../app.js";
 describe('Test /howold route', function () {
     test('responds to /howold', async () => {
         const res = await request(app).get('/howold?dob=02/02/1996');
+        //console.log(res.statusCode, res.body)
         expect(res.statusCode).toBe(200);
         expect(res.body).toEqual({
             success: true,
