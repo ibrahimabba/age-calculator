@@ -1,12 +1,12 @@
 export const howOldService = async (query) => {
   if (!query.dob) {
-    return 'Invalid date'
+    return 'Invalid input'
   }
 
   const dateOfBirth = new Date(query.dob)
 
   if (dateOfBirth.toString() === 'Invalid Date') {
-    return 'Invalid date'
+    return 'Invalid input'
   }
   return calculateAge(dateOfBirth)
 }
