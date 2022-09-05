@@ -2,7 +2,6 @@
 
 This is a simple api project that calculates age when given date of birth timestamp.
 
-
 ## Built With
 
 The project is built with Nodejs and Express js.
@@ -51,7 +50,7 @@ subtract the year from javascript epoch time and then return the age to the clie
 ## Installation
 
 ```bash
-$ yarn install
+  yarn install
 ```
 
 ## Running the app
@@ -60,14 +59,14 @@ The project can be runned by both yarn and npm.
 
 ```bash
 # development
-$ yarn run start
+  yarn run start
 
 # watch mode
-$ yarn run start:dev
+  yarn run start:dev
 ```
 
 ## Test
 
 ```bash
-$ yarn run test
+  yarn run test
 ```

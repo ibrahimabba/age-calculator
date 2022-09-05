@@ -8,5 +8,4 @@ app.use(cors())
 
 app.use('/', howoldRoute)
 
-
 export default app
