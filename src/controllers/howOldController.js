@@ -11,16 +11,9 @@ export const howOldController = async (req, res, next) => {
         data: { age: response }
       })
     } else {
-      res.status(400).json(validationErrorResponse)
+      res.status(400).json('Invalid input')
     }
   } catch (error) {
     next(error)
   }
-}
-
-const validationErrorResponse = {
-  success: false,
-  message: 'Invalid input',
-  status: 400,
-  data: {}
 }
