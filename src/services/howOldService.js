@@ -11,8 +11,9 @@ export const howOldService = async (query) => {
   return calculateAge(dateOfBirth)
 }
 
-function calculateAge (dateString) {
-  const ageDifMs = Date.now() - new Date(dateString).getTime()
-  const ageDate = new Date(ageDifMs)
-  return Math.abs(ageDate.getUTCFullYear() - 1970)
+function calculateAge (dateOfBirth) {
+  // convert the dateofbirth to milliseconds and subtract it from the current time to give the milliseconds difference
+  const millisecondsDifferece = Date.now() - new Date(dateOfBirth).getTime()
+  const toDateObj = new Date(millisecondsDifferece) // reconvert to date object
+  return Math.abs(toDateObj.getUTCFullYear() - 1970) // subtract the year since javascript epoch time
 }
